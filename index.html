@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.5">
+    <title>Food</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Smythe&display=swap');
+        body{
+            background-color:#F5F5F5;
+        }
+        .container{
+            width: 600px;
+            height:1161px;
+            background-color:#FFFFFF;
+            margin: 50px auto;
+        }
+        .header_img{
+            width:600px;
+            height:167px;
+        }
+        .shop_name{
+           position: relative;
+            top: -120px;
+            left: 46.07px;
+            gap: 0px;
+            opacity: 0px;
+        }
+        .jimmy{
+            font-family:"Smythe", system-ui;
+            font-size: 39px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+
+        }
+        .content{
+            color: #FFFFFF;
+            font-family: "Smythe", system-ui;
+            font-size: 20.42px;
+            font-weight: 400;
+            line-height: 13.8px;
+            text-align: left;
+            gap: 0px;
+            opacity: 0px;
+        }
+        .item1{
+            width: 508px;
+            height: 140px;
+            top: 234px;
+            margin-left: 46px;
+            gap: 0px;
+            opacity: 0px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item2,.item3{
+            width: 508px;
+            height: 140px;
+            top: 234px;
+            margin-top: 50px;
+            margin-left: 46px;
+            gap: 0px;
+            opacity: 0px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item_img1,.item_img2,.item_img3{
+            width: 70px;
+            height: 100px;
+            margin-bottom: 10px;
+            top: 234px;
+            left: 46px;
+            gap: 0px;
+            opacity: 0.72px;
+
+        }
+        .item_content1,.item_content2,.item_content3{
+            display: inline-block;
+            grid-column-gap: 10px;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        .ruby_pizza,.ruby_burger,.ruby_beer{
+            width: 358px;
+            height: 24px;
+            top: 267px;
+            left: 147px;
+            gap: 0px;
+            opacity: 0px;
+            font-family: "Smythe", system-ui;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            color: #8B8B8B;
+           
+        }
+        .rt_pizza,.rt_burger,.rt_beer{
+            width: 43px;
+            height: 17px;
+            top: 241.2px;
+            left: 147px;
+            gap: 0px;
+            opacity: 0px;
+            font-family:"Smythe", system-ui;
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 16.8px;
+            text-align: left;
+            color: #000000;
+            
+        }
+        .price1,.price2,.price3{
+            width: 19px;
+            height: 24px;
+            top: 299px;
+            left: 147px;
+            gap: 0px;
+            opacity: 0px;
+            font-family: "Smythe";
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            color: #000000;
+
+        }
+        button{
+            cursor: pointer;
+        }
+        .btn1{
+            width: 50px;
+            height: 50px;
+            top: 242px;
+            margin-left: 200px;
+            gap: 0px;
+            border: 1.5px 0px 0px 0px;
+            opacity: 0px;
+            border-radius: 50%;
+            border: 1.5px solid #DEDEDE;
+            margin-top: 10px;
+        }
+        .btn2{
+            width: 50px;
+            height: 50px;
+            top: 242px;
+            margin-left: 250px;
+            gap: 0px;
+            border: 1.5px 0px 0px 0px;
+            opacity: 0px;
+            border-radius: 50%;
+            border: 1.5px solid #DEDEDE;
+            margin-top: 10px;
+        }
+        .btn3{
+            width: 50px;
+            height: 50px;
+            top: 242px;
+            margin-left: 230px;
+            gap: 0px;
+            border: 1.5px 0px 0px 0px;
+            opacity: 0px;
+            border-radius: 50%;
+            border: 1.5px solid #DEDEDE;
+            margin-top: 10px;
+        }
+        .plus_btn1,.plus_btn2,.plus_btn3{
+            width: 27px;
+            height: 28.5px;
+            top: 253px;
+            left: 516px;
+            gap: 0px;
+            opacity: 0px;
+            font-family: Inter;
+            font-size: 32px;
+            font-weight: 200;
+            line-height: 24px;
+            text-align: center;
+            color: #3C3C3C;
+        }
+        .divider{
+            width: 504px;
+            height: 0px;
+            top: 374px;
+            margin-left: 50px;
+            gap: 0px;
+            border: 1px 0px 0px 0px;
+            opacity: 0px;
+            border: 1px solid #D2D2D2
+        }
+        .form-popup{
+            width: 524px;
+            height: 542.24px;
+            top: 292px;
+            left: 38px;
+            gap: 0px;
+            border-radius: 3.89px 0px 0px 0px;
+            border: 1.3px 0px 0px 0px;
+            opacity: 0px;
+            background: #FFFFFF;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 5.19px 5.19px 255.44px 0px #00000080;
+        }
+        .form-container{
+            position: absolute;
+        }
+        h1{
+            width: 304.37px;
+            height: 40.92px;
+            top: 339.32px;
+            left: 146.7px;
+            gap: 0px;
+            opacity: 0px;
+            font-family: Verdana;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 31.12px;
+            text-align: center;
+            color: #000000;
+            font-family: Verdana;
+            margin-left: 80px;
+
+        }
+        input{
+            width: 475.91px;
+            height: 71.3px;
+            top: 426.32px;
+            left: 61.22px;
+            gap: 0px;
+            border-radius: 3.89px 0px 0px 0px;
+            border: 1.3px 0px 0px 0px;
+            opacity: 0px;
+            color: #757575;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 31.12px;
+            text-align: left;
+            border: 1.3px solid #757575;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            margin-left: 10px;
+        }
+        .btn{
+            width: 475.91px;
+height: 71.3px;
+top: 733.09px;
+left: 61.22px;
+gap: 0px;
+border-radius: 3.89px 0px 0px 0px;
+opacity: 0px;
+background: #16DB99;
+font-family: Verdana;
+font-size: 20px;
+font-weight: 700;
+line-height: 31.12px;
+text-align: center;
+color: #FFFFFF;
+margin-left: 20px;
+        }   
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://i.ibb.co/ygG5gvF/food-img1.jpg" class="header_img">
+            <div class="shop_name">
+                <text class="jimmy">Jimmy’s Diner</text><br><br>
+                <text class="content">The best burgers and pizzas in town.</text>
+            </div>
+        </header>
+        <div class="item1">
+            <img class="item_img1" src="https://i.pinimg.com/564x/ea/30/28/ea302890e102b91f064845391b5a32aa.jpg">
+            <div class="item_content1">
+            <ruby class="ruby_pizza">pepperoni,mushrom,mozarella
+                <rt class="rt_pizza">Pizza</rt>
+            </ruby>
+            <div class="price1">$14</div>
+            </div>
+            <button class="btn1"><text class="plus_btn1" >+</text></button>
+        </div>
+        <div class="divider">
+          
+        </div>
+        <div class="item2">
+            <img class="item_img2" src="https://i.pinimg.com/564x/fc/d2/04/fcd2043b996859179f0e8e393965e71d.jpg">
+            <div class="item_content2">
+            <ruby class="ruby_burger">beef, cheese, lettuce
+                <rt class="rt_burger">Hamburger</rt>
+            </ruby>
+            <div class="price2">$12</div>
+            </div>
+            <button class="btn2"><text class="plus_btn2" >+</text></button>
+        </div>
+        <div class="divider">
+          
+        </div>
+        <div class="item3">
+            <img class="item_img3" src="https://i.pinimg.com/736x/d1/41/32/d14132db6e357ecf318d9f3cbeb9a6c3.jpg">
+            <div class="item_content3">
+            <ruby class="ruby_beer">grain, hops, yeast, water
+                <rt class="rt_beer">Beer</rt>
+            </ruby>
+            <div class="price3">$12</div>
+            </div>
+            <button class="btn3"><text class="plus_btn3" >+</text></button>
+        </div>
+        <div class="divider">
+          
+        </div>
+        <div class="totalprice">
+            
+        </div>
+        <div class="form-popup" id="myForm">
+            <form  class="form-container" validate>
+              <h1>Enter card details</h1>
+          
+              <input type="text" placeholder="Enter your name" name="names" id="name" required >
+          
+              <input type="text" placeholder="Enter card number" name="card" id="card" required >
+
+              <input type="text" placeholder="Enter cvv" name="cvv" id="cvv" required >
+          
+              <button type="submit" class="btn" >pay</button>
+           </form>
+          </div>
+        </div>
+        
+    <script>
+    const containers = document.querySelector(".container");
+const pizzaEl = document.querySelector(".rt_pizza");
+let pizzaItem = pizzaEl.textContent;
+const burgerEl = document.querySelector(".rt_burger");
+let burgerItem = burgerEl.textContent;
+const beerEl = document.querySelector(".rt_beer");
+let beerItem = beerEl.textContent;
+const pizzaPrice = document.querySelector(".price1");
+let price1 = pizzaPrice.textContent;
+const burgerPrice = document.querySelector(".price2");
+let price2 = burgerPrice.textContent;
+const beerPrice = document.querySelector(".price3");
+let price3 = beerPrice.textContent;
+const btn1 = document.querySelector(".btn1");
+const btn2 = document.querySelector(".btn2");
+const btn3 = document.querySelector(".btn3");
+let totalPrice = 0;
+
+let newDiv;
+let headerDiv;
+
+const divider = document.createElement("div");
+divider.style.width = "100%";
+divider.style.height = "1px";
+divider.style.backgroundColor = "black";
+divider.style.marginBottom = "20px";
+divider.style.marginTop = "10px";
+divider.style.class="divided";
+
+const complete = document.createElement("button");
+complete.style.width = "508px";
+complete.style.height = "60px";
+complete.style.top = "1048px";
+complete.style.left = "46px";
+complete.style.padding = "18px 175px 18px 194px";
+complete.style.borderRadius = "3px 0px 0px 0px";
+complete.style.background = "#16DB99";
+complete.style.boxShadow = "0px 1px 2px 0px #0000000D";
+complete.textContent = "Complete Order";
+complete.style.fontFamily = "verdana";
+complete.style.color = "white";
+complete.style.fontSize = "16px";
+complete.style.marginTop = "50px";
+complete.style.border = "none";
+complete.onclick = detail();
+myForm.style.display = "none";
+complete.style.display = "none";
+
+complete.addEventListener("click", function () {
+  const myForm = document.getElementById("myForm");
+  const formContainer = document.querySelector(".form-container");
+  const name = document.querySelector(".name");
+  const card = document.querySelector(".card");
+  const cvv = document.querySelector(".cvv");
+  function open() {
+    myForm.style.display = "block";
+   
+  }
+  open();
+});
+
+function updateTotal() {
+  const totalElement = document.querySelector(".total span:last-child");
+  totalElement.textContent = `$${totalPrice.toFixed(2)}`;
+}
+
+function update(price) {
+  totalPrice += parseFloat(price.slice(1));
+
+  // Create a new element for the total
+  let totalContainer = document.createElement("div");
+  totalContainer.style.display = "flex";
+  totalContainer.style.justifyContent = "space-between";
+  totalContainer.style.fontSize = "28px";
+  totalContainer.style.fontWeight = "400";
+  totalContainer.style.marginTop = "20px";
+
+  let totalLabel = document.createElement("span");
+  totalLabel.textContent = "Total Price:";
+
+  let totalValue = document.createElement("span");
+  totalValue.textContent = `$${totalPrice.toFixed(2)}`;
+
+  totalContainer.appendChild(totalLabel);
+  totalContainer.appendChild(totalValue);
+
+  // Remove any existing total element
+  let existingTotal = newDiv.querySelector(".total");
+  if (existingTotal) {
+    newDiv.removeChild(existingTotal);
+  }
+
+  newDiv.appendChild(divider);
+  // Add a class to the total container
+  totalContainer.className = "total";
+
+  // Append the total container to the newDiv
+  newDiv.appendChild(totalContainer);
+
+  // Show the complete button
+  complete.style.display = "block";
+  newDiv.appendChild(complete);
+}
+
+function detail() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+
+function createOrderDiv() {
+  newDiv = document.createElement("div");
+  newDiv.style.width = "508px";
+  newDiv.style.marginLeft = "50px";
+  newDiv.style.textAlign = "center";
+  newDiv.style.marginTop = "20px";
+  newDiv.style.fontFamily = "Smythe";
+
+  headerDiv = document.createElement("div");
+  headerDiv.innerHTML = "<span>Your Order</span>";
+  headerDiv.style.fontWeight = "400";
+  headerDiv.style.marginBottom = "10px";
+  headerDiv.style.fontSize = "28px";
+
+  newDiv.appendChild(headerDiv);
+
+  containers.appendChild(newDiv);
+ 
+}
+
+function createContentDiv(item, price, itemElement) {
+  let contentDiv = document.createElement("div");
+  contentDiv.style.display = "flex";
+  contentDiv.style.justifyContent = "space-between";
+  contentDiv.style.alignItems = "center";
+  contentDiv.style.fontSize = "28px";
+
+  let itemDiv = document.createElement("div");
+  itemDiv.style.display = "flex";
+  itemDiv.style.alignItems = "center";
+
+  let itemSpan = document.createElement("span");
+  itemSpan.textContent = item;
+
+  let removeItem = document.createElement("span");
+  removeItem.style.color = " #BBBBBB";
+  removeItem.style.fontSize = "12px";
+  removeItem.style.fontWeight = "400";
+  removeItem.textContent = "remove";
+  removeItem.style.marginLeft = "10px";
+
+  // Add event listener for remove button
+  removeItem.addEventListener("click", function () {
+    totalPrice -= parseFloat(price.slice(1));
+    contentDiv.remove();
+    updateTotal();
+  });
+
+  itemDiv.appendChild(itemSpan);
+  itemDiv.appendChild(removeItem);
+
+  let priceElement = document.createElement("span");
+  priceElement.textContent = price;
+
+  contentDiv.appendChild(itemDiv);
+  contentDiv.appendChild(priceElement);
+
+  newDiv.appendChild(contentDiv);
+}
+
+let quantity1 = 0;
+let quantity2 = 0;
+let quantity3 = 0;
+let pizzaItems = [];
+let burgerItems = [];
+let beerItems = [];
+
+btn1.addEventListener("click", function () {
+  if (!newDiv) {
+    createOrderDiv();
+  }
+  quantity1++;
+  let existingItem = pizzaItems.find(item => item.item === pizzaItem);
+  if (existingItem) {
+    existingItem.quantity++;
+    updateQuantity(existingItem.contentDiv, existingItem.quantity);
+  } else {
+    createContentDiv(pizzaItem, price1, pizzaEl, quantity1);
+    pizzaItems.push({ item: pizzaItem, quantity: quantity1, contentDiv: newDiv.lastChild });
+  }
+  const prices1 = document.querySelector(".price1");
+  const price = prices1.textContent;
+  update(price);
+});
+
+btn2.addEventListener("click", function () {
+  if (!newDiv) {
+    createOrderDiv();
+  }
+  quantity2++;
+  let existingItem = burgerItems.find(item => item.item === burgerItem);
+  if (existingItem) {
+    existingItem.quantity++;
+    updateQuantity(existingItem.contentDiv, existingItem.quantity);
+  } else {
+    createContentDiv(burgerItem, price2, burgerEl, quantity2);
+    burgerItems.push({ item: burgerItem, quantity: quantity2, contentDiv: newDiv.lastChild });
+  }
+  const prices2 = document.querySelector(".price2");
+  const price = prices2.textContent;
+  update(price);
+});
+
+btn3.addEventListener("click", function () {
+  if (!newDiv) {
+    createOrderDiv();
+  }
+  quantity3++;
+  let existingItem = beerItems.find(item => item.item === beerItem);
+  if (existingItem) {
+    existingItem.quantity++;
+    updateQuantity(existingItem.contentDiv, existingItem.quantity);
+  } else {
+    createContentDiv(beerItem, price3, beerEl, quantity3);
+    beerItems.push({ item: beerItem, quantity: quantity3, contentDiv: newDiv.lastChild });
+  }
+  const prices3 = document.querySelector(".price3");
+  const price = prices3.textContent;
+  update(price);
+});
+
+function updateQuantity(contentDiv, quantity) {
+  let itemSpan = contentDiv.children[0].children[0];
+  itemSpan.textContent = `${itemSpan.textContent.split(' (')[0]} (${quantity})`;
+}
+
+function createContentDiv(item, price, itemElement, quantity) {
+  let contentDiv = document.createElement("div");
+  contentDiv.style.display = "flex";
+  contentDiv.style.justifyContent = "space-between";
+  contentDiv.style.alignItems = "center";
+  contentDiv.style.fontSize = "28px";
+
+  let itemDiv = document.createElement("div");
+  itemDiv.style.display = "flex";
+  itemDiv.style.alignItems = "center";
+
+  let itemSpan = document.createElement("span");
+  itemSpan.textContent = `${item} (${quantity})`;
+
+  let removeItem = document.createElement("span");
+  removeItem.style.color = " #BBBBBB";
+  removeItem.style.fontSize = "12px";
+  removeItem.style.fontWeight = "400";
+  removeItem.textContent = "remove";
+  removeItem.style.marginLeft = "10px";
+  removeItem.style.cursor="pointer";
+
+  removeItem.addEventListener("click", function () {
+    let itemText = itemSpan.textContent;
+    let itemQuantity = parseInt(itemText.split(' (')[1].split(')')[0]);
+    if (itemQuantity > 1) {
+      itemQuantity--;
+      itemSpan.textContent = `${itemText.split(' (')[0]} (${itemQuantity})`;
+      totalPrice -= parseFloat(price.slice(1));
+      updateTotal();
+    } else {
+      contentDiv.remove();
+      totalPrice -= parseFloat(price.slice(1));
+      updateTotal();
+      if (item === pizzaItem) {
+        pizzaItems = pizzaItems.filter(i => i.item !== pizzaItem);
+      } else if (item === burgerItem) {
+        burgerItems = burgerItems.filter(i => i.item !== burgerItem);
+      } else if (item === beerItem) {
+        beerItems = beerItems.filter(i => i.item !== beerItem);
+      }
+    }
+  });
+
+  itemDiv.appendChild(itemSpan);
+  itemDiv.appendChild(removeItem);
+
+  let priceElement = document.createElement("span");
+  priceElement.textContent = price;
+
+  contentDiv.appendChild(itemDiv);
+  contentDiv.appendChild(priceElement);
+
+  newDiv.appendChild(contentDiv);
+}
+
+const form = document.querySelector(".form-container"); // Select the form element
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();  // Prevent form submission
+    newDiv.style.display = "none";  // Hide the order div
+    myForm.style.display = "none";  // Hide the form
+    const usrName = document.querySelector("#name").value;  // Get the user's name
+    
+    // Create and display the thank you message
+    const tqMessage = document.createElement("div");
+    tqMessage.style.width = "504px";
+    tqMessage.style.height = "80px";
+    tqMessage.style.marginTop = "50px";
+    tqMessage.style.color = "#065F46";
+    tqMessage.style.background = "#ECFDF5";
+    tqMessage.style.marginLeft = "50px";
+    tqMessage.style.textAlign = "center";
+    tqMessage.style.paddingTop = "20px";
+    tqMessage.style.fontFamily = "Smythe";
+    tqMessage.style.fontSize = "32px";
+    tqMessage.style.fontWeight = "400";
+    tqMessage.textContent = `Thanks, ${usrName}! Your Order is On the way!`;
+    
+    containers.appendChild(tqMessage);  // Append the message to the container
+   
+});
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
